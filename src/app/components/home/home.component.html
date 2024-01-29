@@ -1,0 +1,96 @@
+<div class="container">
+  <div class="myDiv">
+    <mat-card class="example-result-card">
+      <div class="">
+        <mat-card-content>
+          <h6>Password Generator</h6>
+          <div>
+            <div class="input-group flex-nowrap">
+              <input
+                type="text"
+                class="form-control"
+                placeholder="Password"
+                aria-label="Username"
+                readonly
+                aria-describedby="addon-wrapping"
+                [(ngModel)]="generatedPassword"
+              />
+              <span class="input-group-text" id="addon-wrapping">
+                <mat-icon style="cursor: pointer" (click)="onClick()">{{
+                  iconName
+                }}</mat-icon>
+              </span>
+            </div>
+          </div>
+          <div class="example-label-container">
+            <label
+              id="example-name-label"
+              style="color: #105e21"
+              class="example-name-label"
+              >Password Length</label
+            >
+            <label style="color: #105e21" class="example-value-label">{{
+              value
+            }}</label>
+          </div>
+          <mat-slider
+            class="example-margin"
+            max="20"
+            min="8"
+            step="1"
+            discrete="true"
+          >
+            <input matSliderThumb [(ngModel)]="value" />
+          </mat-slider>
+          <div style="max-width: 400px">
+            <section class="example-section">
+              <div>
+                <p>
+                  <mat-checkbox
+                    style="font-family: Russo One"
+                    [(ngModel)]="lower"
+                    >LOWERCASE (a-z)</mat-checkbox
+                  >
+                </p>
+                <p>
+                  <mat-checkbox
+                    style="font-family: Russo One"
+                    [(ngModel)]="upper"
+                    >UPPERCASE (A-Z)</mat-checkbox
+                  >
+                </p>
+              </div>
+              <div>
+                <p>
+                  <mat-checkbox
+                    style="font-family: Russo One"
+                    [(ngModel)]="symbol"
+                    >SYMBOLS (@,$,&,-,#)</mat-checkbox
+                  >
+                </p>
+                <p>
+                  <mat-checkbox
+                    style="font-family: Russo One"
+                    [(ngModel)]="digit"
+                    >DIGITS (0-9)</mat-checkbox
+                  >
+                </p>
+              </div>
+            </section>
+          </div>
+          <div style="display: flex; justify-content: center">
+            <button
+              mat-raised-button
+              color="warn"
+              style="font-family: Russo One"
+              (click)="onGenerate()"
+            >
+              GENERATE
+            </button>
+          </div>
+        </mat-card-content>
+      </div>
+    </mat-card>
+  </div>
+  <app-footer></app-footer>
+</div>
