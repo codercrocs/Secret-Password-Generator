@@ -15,7 +15,7 @@ import { MatIconModule } from '@angular/material/icon';
 import { MatButtonModule } from '@angular/material/button';
 import { MatSnackBarModule } from '@angular/material/snack-bar';
 import { FooterComponent } from './components/footer/footer.component';
-const appRoutes: Routes = [{ path: '**', component: HomeComponent }];
+// const appRoutes: Routes = [{ path: '**', component: HomeComponent }];
 
 @NgModule({
   declarations: [AppComponent, HomeComponent, FooterComponent],
@@ -31,7 +31,7 @@ const appRoutes: Routes = [{ path: '**', component: HomeComponent }];
     FormsModule,
     MatCardModule,
     MatCheckboxModule,
-    RouterModule.forRoot(appRoutes),
+    // RouterModule.forRoot(appRoutes),
   ],
   providers: [],
   bootstrap: [AppComponent],
